@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  
+  server:
+    build: ./love-calculator
+    ports:
+      - published: 4200
+        target: 4200
+        protocol: tcp
+        mode: host
+
+  client:
+    build: ./love-calculator-api
+    ports:
+      - published: 3000
+        target: 3000
+        protocol: tcp
+        mode: host  
