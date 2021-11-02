@@ -37,8 +37,11 @@ bower_components
 # Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
 
+.vscode/
+
 # Dependency directories
-node_modules/
+love-calculator/node_modules/
+love-calculator-api/node_modules/
 jspm_packages/
 
 # TypeScript v1 declaration files
