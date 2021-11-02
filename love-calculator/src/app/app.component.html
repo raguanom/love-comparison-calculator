@@ -1,0 +1,50 @@
+<div class="form-card">
+  <div class="body-elem">
+    <div class="head-banner">
+      <h1 class="title">
+        Love Comparison Calculator
+      </h1>
+    </div>
+    <div class="form-section">
+      <form [formGroup]="loveCalculator" (ngSubmit)="onSubmit()">
+        <div class="form-row">
+          <div class="text-input-1">
+            <input class="textbox" type="text" formControlName="personOneName"
+              placeholder="Enter the name of first person .eg Jack" (keypress)="keyPressAlphanumeric($event)">
+          </div>
+          <div class="and-class">
+            <p> and </p>
+          </div>
+          <div class="text-input-2">
+            <input class="textbox" type="text" formControlName="personTwoName"
+              placeholder="Enter the name of second person .eg Jill" (keypress)="keyPressAlphanumeric($event)">
+          </div>
+        </div>
+        <div class="calc-button">
+          <button id="calculate-button-container" class="button" type="submit">Calculate</button>
+        </div>
+        <br>
+        <br>
+        <hr class="horizontal-line" />
+      </form>
+    </div>
+    <div class="result-section-container">
+      <div class="results-section">
+        <div class="results">
+          <div [hidden]='!this.hideResult'>
+            <h2 class="title"> Result will show here </h2>
+          </div>
+          <div [hidden]='this.hideResult'>
+            <h2 class="title">{{firstPersonName}} Loves {{secondPersonName}} {{result}}%</h2>
+          </div>
+          <br />
+        </div>
+        <div class="clear-results">
+          <div class="result-button">
+            <button class="button" type="submit" (click)="clearResult()">Clear Result</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

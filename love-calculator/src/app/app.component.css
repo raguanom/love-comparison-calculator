@@ -1,0 +1,220 @@
+.head-banner {
+  background-color: white;
+  width: inherit;
+}
+
+.title {
+  color: rgb(231, 68, 122);
+}
+
+.horizontal-line {
+  color: rgb(231, 68, 122);
+}
+
+.form-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: pink;
+}
+
+.body-elem {
+  display: grid;
+  grid-template-rows: "1fr 1fr 1fr";
+  grid-template-areas: "top""mid""bottom";
+  width: 90vw;
+  height: 98vh;
+}
+
+.head-banner {
+  grid-area: top;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.form-section {
+  grid-area: mid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-section-container {
+  grid-area: bottom;
+  display: flex;
+  justify-content: center;
+  align-items: top;
+}
+
+.results-section {
+  display: grid;
+  grid-template-rows: "1fr 1fr";
+  grid-template-areas: "content""button-space";
+}
+
+.results {
+  grid-area: content;
+}
+
+.clear-results {
+  grid-area: button-space;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: "1fr 1fr 1fr";
+  grid-template-areas: "first-name and second-name";
+  width: 100%;
+}
+
+.text-input-1 {
+  grid-area: first-name;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+.text-input-2 {
+  grid-area: second-name;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.and-class {
+  grid-area: and;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 15px 0px 15px;
+}
+
+.result-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calc-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.textbox {
+  width: 18vw;
+  height: 4vh;
+}
+
+.button {
+  width: 8vw;
+  height: 4vh;
+  border-radius: 2px;
+  border: rgb(231, 68, 122);
+  background-color: rgb(231, 68, 122);
+  color: white;
+}
+
+@media only screen and (max-width: 900px) {
+  .head-banner {
+    background-color: white;
+    width: 100vw;
+  }
+
+  .body-elem {
+    display: grid;
+    grid-template-rows: "1fr 1fr 1fr";
+    grid-template-areas: "top""mid""bottom";
+    width: 100vw;
+    height: 98vh;
+  }
+
+  .title {
+    text-size-adjust: auto;
+  }
+
+  .form-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: pink;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: "1fr 1fr 1fr";
+    grid-template-areas: "first-name""and""second-name";
+    width: 100%;
+  }
+
+
+  .text-input-1 {
+    grid-area: first-name;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text-input-2 {
+    grid-area: second-name;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .and-class {
+    grid-area: and;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 15px 0px 15px;
+  }
+
+  .textbox {
+    width: 50vw;
+    height: 4vh;
+  }
+
+  .button {
+    width: 50vw;
+    height: 4vh;
+    border-radius: 2px;
+    border: rgb(231, 68, 122);
+    background-color: rgb(231, 68, 122);
+    color: white;
+  }
+
+  #calculate-button-container {
+    margin-top: 25px;
+  }
+
+}
+
+  @media only screen and (max-width: 650) {
+    .textbox {
+      width: 90vw;
+      height: 4vh;
+    }
+  
+    .button {
+      width: 90vw;
+      height: 4vh;
+      border-radius: 2px;
+      border: rgb(231, 68, 122);
+      background-color: rgb(231, 68, 122);
+      color: white;
+    }
+  
+    #calculate-button-container {
+      margin-top: 25px;
+    }
+  
+  }
+  
+  
