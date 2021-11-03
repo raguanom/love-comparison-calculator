@@ -1,11 +1,3 @@
-let nameOfFirstPerson = process.argv[2];
-let nameOfSecondPerson = process.argv[3];
-
-// When parsing, consider that some names might be entered with numbers in the string
-// others may be purely numbers
-// others may be strange characters
-// keep all this in mind
-
 const createDatasource = (nameOfFirstPerson, nameOfSecondPerson) => {
     return `${nameOfFirstPerson.toUpperCase()}LOVES${nameOfSecondPerson.toUpperCase()}`;
 }
@@ -27,15 +19,13 @@ const getCharacterOccuranceCountArray = (str, charCountArray) => {
     return getCharacterOccuranceCountArray(str, charCountArray);
 }
 
-newCharCountArray = [];
-
 const singleLineCalculation = (charCountArray, newCharCountArray) => {
     if (charCountArray.length === 0) return newCharCountArray;
 
     let firstElement = charCountArray.shift();
     let lastElement = (charCountArray.length > 0) ? charCountArray.pop() : 0;
     let tempNewVal = firstElement + lastElement;
-    if (tempNewVal > 10) {
+    if (tempNewVal >= 10) {
         let digit = tempNewVal.toString().split('');
         for (d of digit){
             newCharCountArray.push(parseInt(d));
